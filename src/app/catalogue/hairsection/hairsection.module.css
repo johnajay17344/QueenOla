@@ -1,0 +1,114 @@
+.section {
+  padding: 80px 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold, #c9a24b);
+  margin: 0 0 12px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 40px);
+  color: var(--black, #1a1310);
+  margin: 0 0 16px;
+}
+
+.quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--black, #1a1310);
+  opacity: 0.65;
+  margin: 0;
+}
+
+/* ===== embla carousel ===== */
+
+.carouselWrap {
+  position: relative;
+  padding: 0 24px;
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 0 24px;
+}
+.viewport {
+  overflow: hidden;
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 260px;
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white, #fff);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+  background: var(--gold, #c9a24b);
+  color: #fff;
+}
+
+.arrowPrev {
+  left: 0;
+}
+
+.arrowNext {
+  right: 0;
+}
+
+@media (max-width: 760px) {
+  .slide {
+    width: 200px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}

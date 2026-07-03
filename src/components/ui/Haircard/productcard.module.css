@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white, #fff);
+  border: 1px solid var(--border, #eee);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/ 4;
+  background: #f4f1ea;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 6px;
+}
+
+.category {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold, #e6b4473e);
+  margin: 0;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--black, #1a1310);
+  margin: 0;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black, #1a1310);
+  opacity: 0.75;
+  margin: 0 0 10px;
+}
+
+.enquireButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  background: var(--gold, #C9A24B);
+  color: var(--white, #fff);
+}
+.enquireButton:hover {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 19px;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 24px;
+  background: var(--gold);
+  color:black;
+}

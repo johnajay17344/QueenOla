@@ -1,0 +1,234 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  transition: .35s ease;
+  z-index: 1000;
+}
+.scrolled {
+  background: BLACK;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+.nav{
+    font-family: var(--font-body);
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 24px;
+    color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.logoImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* gradient text — needs background-clip, "color" alone can't do gradients */
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  background:var(--gold, #c9a24b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:black;
+  -webkit-text-fill-color: transparent;
+}
+
+.links {
+  display: flex;
+  gap: 34px;
+  flex: 1;
+  justify-content: center;
+}
+
+.links a {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  position: relative;
+  padding: 4px 0;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  background: #e6b4473e;
+  color: #fff;
+  border: none;
+  gap:0.7rem;
+  border-radius: 99px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.whatsappButton:hover {
+  background: #f0a502e9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+}
+
+.whatsappButton:active {
+  transform: translateY(0);
+}
+
+.whatsappButton:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.35);
+  outline-offset: 3px;
+}
+
+.burger {
+  display: none;
+  width: 32px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  z-index: 1001;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gold, #e6b4473e);
+  border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 10px; }
+.burger span:nth-child(3) { top: 20px; }
+
+.desktopWhatsapp{
+    display:block;
+}
+
+.mobileWhatsapp{
+    display:none;
+}
+
+.burgerOpen span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burgerOpen span:nth-child(2) {
+  opacity: 0;
+}
+.burgerOpen span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 760px) {
+   .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right .35s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,.12);
+    z-index: 999;
+
+    /* gradient panel background — oversized + animated for a moving wave feel */
+   background: linear-gradient(
+  180deg,
+  #fdfbf6 0%,
+  #f3e7c9 25%,
+  #d9b568 50%,
+  #f3e7c9 75%,
+  #fdfbf6 100%
+);
+background-size: 100% 300%;
+animation: waveMove 25s ease-in-out infinite;
+  }
+
+  @keyframes waveMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .links a {
+    color: #1a1310;
+  }
+
+  .linksOpen {
+    right: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .whatsappButton{
+    display: none;
+  }
+
+  .desktopWhatsapp{
+    display:none;
+  }
+
+  .mobileWhatsapp{
+    display:flex;
+  }
+
+  .logoText{
+    font-size:18px;
+  }
+
+  .logoImage{
+    width:42px;
+    height:42px;
+  }
+}
