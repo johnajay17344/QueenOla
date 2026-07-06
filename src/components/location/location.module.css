@@ -1,18 +1,16 @@
 .section {
   padding: 100px 32px;
   overflow: hidden;
-
-  /* gradient panel background — oversized + animated for a moving wave feel */
   background: linear-gradient(
     180deg,
     #fdfbf6 0%,
     #f3e7c9 25%,
-    #f3e7c9 50%,
+    #f4dfac 50%,
     #fdfbf6 75%
     #d9b568 100%,
   );
   background-size: 100% 300%;
-  animation: waveMove 25s ease-in-out infinite;
+  animation: waveMove 5s ease-in-out infinite;
 }
 
 @keyframes waveMove {
@@ -35,8 +33,6 @@
 
 
 
-
-
 .wrap {
   max-width: 1180px;
   margin: 0 auto;
@@ -44,6 +40,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
+  justify-content: center;
   
 }
 
