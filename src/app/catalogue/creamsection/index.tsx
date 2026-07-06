@@ -21,7 +21,6 @@ export default function CreamSection() {
     
       <div className={styles.header}>
         <p className={styles.subtitle}>Cream</p>
-        <h2 className={styles.title}>Crowned in Every Strand</h2>
         <p className={styles.quote}>
           “Your hair is your crown — we just help you wear it right.”
         </p>

@@ -4,8 +4,10 @@ import styles from "./navbar.module.css";
 import { navbarItems, logo, whatsappButtonData } from "./data";
 import WhatsappButton from "../../components/whatsappButton/whatsappButon";
 import Image from "next/image";
+import link from "next/link"
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 // Routes that should always render the "scrolled" (solid) header style
 const NO_TRANSPARENT_ROUTES: string[] = [];
@@ -79,9 +81,9 @@ useEffect(() => {
         <ul className={linksClassName}>
           {navbarItems.map((item) => (
             <li key={item.name}>
-              <a href={item.href} onClick={() => setMenuOpen(false)}>
+              <Link href={item.href} onClick={() => setMenuOpen(false)}>
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
 

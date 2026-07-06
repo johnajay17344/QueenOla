@@ -20,11 +20,10 @@ export default function NailSection() {
 
   return (
 
-    <div className={styles.section} id="nail">
+    <div className={styles.nailSection} id="nail">
     
       <div className={styles.header}>
         <p className={styles.subtitle}>Nails</p>
-        <h2 className={styles.title}>Crowned in Every Strand</h2>
         <p className={styles.quote}>
           “Your nails are your crown — we just help you wear them right.”
         </p>

@@ -1,0 +1,20 @@
+.catalogue {
+    padding: 2rem 1rem;
+}
+
+.catalogue .h1{
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--gold, #c9a24b);
+}
+
+.textCenter {
+    text-align: center;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--black, #1a1310);
+}

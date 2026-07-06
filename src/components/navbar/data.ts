@@ -19,14 +19,14 @@ export const whatsappButtonData: whatsappButtonProps = {
 
 
 export const navbarItems: NavbarItem[] = [
-{ name: "Home", href: "/" },
-{ name: "About", href: "#about" },
-{ name: "Services", href: "#services" },
-{ name: "Contact", href: "#contact" },
-]
+  { name: "Home", href: "/" },
+  { name: "catalogue", href: "#catalogue" },   // real route now, not a hash
+  { name: "Services", href: "#services" },     // hash sections only exist on "/"
+  { name: "Contact", href: "#contact" },       // so prefix with "/" to get back there first
+];
 
 export const logo: Logo = {
-  src: "/logo/logo.jpeg",
+    src: "/images/queenola.png", 
   alt: "Queen Ola Logo",
   name: "QUEEN OLA",
 };
